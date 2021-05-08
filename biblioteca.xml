@@ -1,50 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE biblioteca [
-    <!ELEMENT biblioteca (libro*, revista*, periodico*)>
-    <!-- Elementos y atributos de libro -->
-    <!ELEMENT libro (titulo_libro, capitulo+, indice_libro, sinopsis)>
-    <!ATTLIST libro
-        id_libro ID #REQUIRED
-        tipo_clase (novela | infantil | didactico) #REQUIRED
-        paginas_libro NMTOKEN #REQUIRED
-    >
-    <!ELEMENT titulo_libro (#PCDATA)>
-    <!ELEMENT capitulo (titulo_capitulo, contenido_libro)>
-    <!ATTLIST capitulo paginas_capitulo NMTOKEN #REQUIRED>
-    <!ELEMENT titulo_capitulo (#PCDATA)>
-    <!ELEMENT contenido_libro EMPTY>
-    <!ATTLIST contenido_libro informacion CDATA #REQUIRED>
-    <!ELEMENT indice_libro (#PCDATA)>
-    <!ELEMENT sinopsis (#PCDATA)>
-    <!-- Elementos y atributos de revista -->
-    <!ELEMENT revista (titulo_revista, numero_revista, indice_revista,seccion_revista+)>
-    <!ATTLIST revista
-        id_revista ID #REQUIRED
-        tipo_clase (informatica | corazon | coches | investigacion | otras) #REQUIRED
-        paginas_revista NMTOKEN #REQUIRED
-    >
-    <!ELEMENT titulo_revista (#PCDATA)>
-    <!ELEMENT numero_revista (#PCDATA)>
-    <!ELEMENT indice_revista (#PCDATA)>
-    <!ELEMENT seccion_revista (contenido_revista)>
-    <!ATTLIST seccion_revista paginas_seccion NMTOKEN #REQUIRED>
-    <!ELEMENT contenido_revista EMPTY>
-    <!ATTLIST contenido_revista enlace_contenido_revista CDATA #REQUIRED>
-    <!-- Elementos y atributos de periódico -->
-    <!ELEMENT periodico (indice, seccion_periodico+)>
-    <!ATTLIST periodico
-        id_periodico ID #REQUIRED
-        tipo_clase (nacional | internacional) #REQUIRED
-        fecha CDATA #REQUIRED
-    >
-    <!ELEMENT indice (#PCDATA)>
-    <!ELEMENT seccion_periodico (articulo+)>
-    <!ATTLIST seccion_periodico tipo_seccion_periodico (economia | opinion | deportes | nacional | internacional) #REQUIRED>
-    <!ELEMENT articulo (contenido_articulo)>
-    <!ATTLIST articulo autor CDATA #REQUIRED>
-    <!ELEMENT contenido_articulo EMPTY>
-    <!ATTLIST contenido_articulo enlace_contenido_articulo CDATA #REQUIRED>
-]>
+<!DOCTYPE biblioteca SYSTEM "./biblioteca.dtd">
 
 <biblioteca>
     <libro id_libro="L4sf5" tipo_clase="novela" paginas_libro="500">
@@ -122,56 +77,4 @@
             </articulo>
         </seccion_periodico>
     </periodico>
-</biblioteca> <!-- Vamos a elaborar una estructura de base de datos en XML que permita almacenar 
-los datos de una biblioteca en la red. 
-Para ello se pide que elabores un DTD que permita validar los documentos XML con las siguientes características:
-
-Existen tres tipos de documentos almacenados en la biblioteca: 
-libros, revistas y periódicos. 
-
-Todos los documentos están identificados por el atributo Id.
-
-Para los libros este atributo empieza con la letra “L” seguido de 4 dígitos identificativos.
-Para los periódicos este atributo empieza por la letra “P” seguido de los 4 dígitos identificativos.
-En el caso de las revistas empieza por la letra “R”.
-
-Los libros a su vez son clasificados en :
-novela, infantil o didáctico. 
-Cada libro contiene un atributo identificativo de su clase denominado tipo_clase. 
-Dentro de cada libro se tiene un título, varios capítulos con el título en su interior, un índice y una sinopsis. 
-Tanto en libro como en capítulo existe un atributo que contiene el número de páginas del libro o del capítulo, 
-según corresponda. 
-Cada capítulo contiene un elemento denominado contenido, en el que se tiene un atributo con el enlace a la información.
-
-Las revistas a su vez son clasificadas en: informática, corazón, coches, investigación y otras. 
-Cada revista tiene el atributo tipo_clase identificativo de la clase a la que pertenece. 
-Dentro de cada revista tenemos el título, el número de la revista, un índice de contenido y las secciones. 
-En cada sección y en la revista se tiene un atributo que contiene el número de páginas. 
-Además, en cada sección se tiene la parte denominada contenido, en la que se tiene un atributo 
-con un enlace a la información. 
-De igual forma que en los anteriores, la última etiqueta del árbol debe ser el contenido con 
-un atributo que referencia al contenido. -->
-
-<!-- Los periódicos se clasifican en nacionales e internacionales. 
-Cada periódico contiene el atributo tipo_clase identificativo de la clase a la que pertenece 
-y un atributo que incluye la fecha de publicación.
-Dentro de los periódicos tenemos secciones y un índice. 
-Cada sección debe contener un atributo identificativo del tipo de sección, que puede ser: 
-económica, opinión, deportes, nacional o internacional. 
-Las secciones se dividen en artículos, en donde se define en un atributo el autor. 
-Finalmente, el contenido será el último elemento del árbol, que necesita un atributo que referencie a la información.
-
-Requerimiento 1
-
-Crear un XML con el modelo de datos indicado en el enunciado.
-
-Elaborar un DTD que permita validar el documento XML.
-
-Validar el documento con alguna aplicación externa.
-
-
-Requerimiento 2
-
-Elaborar un XSD que permita validar el documento XML.
-
-Validar el documento con alguna aplicación externa. -->
+</biblioteca>
