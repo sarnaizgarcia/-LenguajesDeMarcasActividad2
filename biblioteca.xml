@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca [
+    <!ELEMENT biblioteca (libro*, revista*, periodico*)>
+    <!-- Elementos y atributos de libro -->
+    <!ELEMENT libro (titulo_libro, capitulo+, indice_libro, sinopsis)>
+    <!ATTLIST libro
+        id_libro ID #REQUIRED
+        tipo_clase (novela | infantil | didactico) #REQUIRED
+        paginas_libro NMTOKEN #REQUIRED
+    >
+    <!ELEMENT titulo_libro (#PCDATA)>
+    <!ELEMENT capitulo (titulo_capitulo, contenido_libro)>
+    <!ATTLIST capitulo paginas_capitulo NMTOKEN #REQUIRED>
+    <!ELEMENT titulo_capitulo (#PCDATA)>
+    <!ELEMENT contenido_libro EMPTY>
+    <!ATTLIST contenido_libro informacion CDATA #REQUIRED>
+    <!ELEMENT indice_libro (#PCDATA)>
+    <!ELEMENT sinopsis (#PCDATA)>
+    <!-- Elementos y atributos de revista -->
+    <!ELEMENT revista (titulo_revista, numero_revista, indice_revista,seccion_revista+)>
+    <!ATTLIST revista
+        id_revista ID #REQUIRED
+        tipo_clase (informatica | corazon | coches | investigacion | otras) #REQUIRED
+        paginas_revista NMTOKEN #REQUIRED
+    >
+    <!ELEMENT titulo_revista (#PCDATA)>
+    <!ELEMENT numero_revista (#PCDATA)>
+    <!ELEMENT indice_revista (#PCDATA)>
+    <!ELEMENT seccion_revista (contenido_revista)>
+    <!ATTLIST seccion_revista paginas_seccion NMTOKEN #REQUIRED>
+    <!ELEMENT contenido_revista EMPTY>
+    <!ATTLIST contenido_revista enlace_contenido_revista CDATA #REQUIRED>
+    <!-- Elementos y atributos de periódico -->
+    <!ELEMENT periodico (indice, seccion_periodico+)>
+    <!ATTLIST periodico
+        id_periodico ID #REQUIRED
+        tipo_clase (nacional | internacional) #REQUIRED
+        fecha CDATA #REQUIRED
+    >
+    <!ELEMENT indice (#PCDATA)>
+    <!ELEMENT seccion_periodico (articulo+)>
+    <!ATTLIST seccion_periodico tipo_seccion_periodico (economia | opinión | deportes | nacional | internacional) #REQUIRED>
+    <!ELEMENT articulo (contenido_articulo)>
+    <!ATTLIST articulo autor CDATA #REQUIRED>
+    <!ELEMENT contenido_articulo EMPTY>
+    <!ATTLIST contenido_articulo enlace_contenido_articulo CDATA #REQUIRED>
+]>
+
+<biblioteca>
+    <libro id_libro="L4sf5" tipo_clase="novela" paginas_libro="500">
+        <titulo_libro>
+            El Conde de Montecristo. Primera Parte: El castillo de If
+        </titulo_libro>
+        <capitulo paginas_capitulo="34">
+            <titulo_capitulo>Capítulo 1: Marsella. La llegada</titulo_capitulo>
+            <contenido_libro informacion="https://es.wikisource.org/wiki/El_conde_de_Montecristo:_1-01" />
+        </capitulo>
+        <capitulo paginas_capitulo="45">
+            <titulo_capitulo>Capítulo 2: El padre y el hijo</titulo_capitulo>
+            <contenido_libro informacion="https://es.wikisource.org/wiki/El_conde_de_Montecristo:_1-02" />
+        </capitulo>
+        <indice_libro>
+            Capítulo 1: Marsella. La llegada
+            Capítulo 2: El padre y el hijo
+            Capítulo 3: Los catalanes
+            Capítulo 4: Complot
+            Capítulo 5: El banquete de boda
+            Capítulo 6: El sustituto del procurador del Rey
+            Capítulo 7: El interrogatorio
+            Capítulo 8: El castillo de If
+            Capítulo 9: La noche de bodas
+            Capítulo 10: El gabinete de las Tullerías
+            Capítulo 11: El ogro de Córcega
+            Capítulo 12: Padre a hijo
+            Capítulo 13: Los cien días
+            Capítulo 14: El preso furioso y el preso loco
+            Capítulo 15: El número 34 y el número 27
+            Capítulo 16: Un sabio italiano
+            Capítulo 17: El calabozo del abate Faria
+            Capítulo 18: El tesoro
+            Capítulo 19: El tercer ataque
+            Capítulo 20: El cementerio del castillo de If
+            Capítulo 21: La isla de Tiboulen
+            Capítulo 22: Los contrabandistas
+            Capítulo 23: La isla de Montecristo
+        </indice_libro>
+        <sinopsis>
+            Cuenta la historia de Edmond Dantès, joven marinero ingenuo y honesto, 
+            que un día ve truncados sus planes de casarse con su prometida, la española Mercedes Igualada, 
+            y de llevar con ella la vida pacífica que siempre soñó, por la traición de sus amigos Fernand Mondego y Eugène Danglars
+        </sinopsis>
+    </libro>
+    <revista id_revista="R4sf5" tipo_clase="otras" paginas_revista="74">
+        <titulo_revista>El País Semanal</titulo_revista>
+        <numero_revista>542</numero_revista>
+        <indice_revista>
+            Reportajes
+            Entrevistas
+            Personajes
+            Columnas
+            Psicología y bienestar
+            Tendencias
+            Preservar el planeta
+        </indice_revista>
+        <seccion_revista paginas_seccion="2">
+            <contenido_revista enlace_contenido_revista="https://elpais.com/eps/" />
+        </seccion_revista>
+    </revista>
+    <periodico id_periodico="P4sf5" tipo_clase="nacional" fecha="2021-03-05">
+        <indice></indice>
+        <seccion_periodico tipo_seccion_periodico="economia">
+            <articulo autor="Bob Esponja">
+                <contenido_articulo enlace_contenido_articulo="https://elpais.com/eps/" />
+            </articulo>
+            <articulo autor="Patricio Estrella">
+                <contenido_articulo enlace_contenido_articulo="https://elpais.com/eps/" />
+            </articulo>
+        </seccion_periodico>
+        <seccion_periodico tipo_seccion_periodico="nacional">
+            <articulo autor="Calamardo">
+                <contenido_articulo enlace_contenido_articulo="https://elpais.com/eps/" />
+            </articulo>
+        </seccion_periodico>
+    </periodico>
+</biblioteca> 
