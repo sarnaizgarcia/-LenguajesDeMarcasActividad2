@@ -89,7 +89,7 @@
                             <xs:element name="seccion_periodico" maxOccurs="10">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="articulo">
+                                        <xs:element name="articulo" maxOccurs="5">
                                             <xs:complexType>
                                                 <xs:sequence>
                                                     <xs:element name="contenido_articulo">
@@ -131,7 +131,7 @@
                                 </xs:restriction>
                             </xs:simpleType>
                         </xs:attribute>
-                        <xs:attribute name="fecha" type="xs:dateTime" use="required"></xs:attribute>
+                        <xs:attribute name="fecha" type="xs:date" use="required"></xs:attribute>
                     </xs:complexType>
                 </xs:element>
             </xs:choice>
