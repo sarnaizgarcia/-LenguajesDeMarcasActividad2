@@ -26,7 +26,7 @@
                         <xs:attribute name="id_libro" use="required">
                             <xs:simpleType>
                                 <xs:restriction base="xs:string">
-                                    <xs:pattern value="L{4}[0-9]"></xs:pattern>
+                                    <xs:pattern value="[L]\w{4}"></xs:pattern>
                                 </xs:restriction>
                             </xs:simpleType>
                         </xs:attribute>
@@ -64,7 +64,7 @@
                         <xs:attribute name="id_revista" use="required">
                             <xs:simpleType>
                                 <xs:restriction base="xs:string">
-                                    <xs:pattern value="R{4}[0-9]"></xs:pattern>
+                                    <xs:pattern value="[R]\w{4}"></xs:pattern>
                                 </xs:restriction>
                             </xs:simpleType>
                         </xs:attribute>
@@ -119,7 +119,7 @@
                         <xs:attribute name="id_periodico" use="required">
                             <xs:simpleType>
                                 <xs:restriction base="xs:string">
-                                    <xs:pattern value="P{4}[0-9]"></xs:pattern>
+                                    <xs:pattern value="[P]\w{4}"></xs:pattern>
                                 </xs:restriction>
                             </xs:simpleType>
                         </xs:attribute>
