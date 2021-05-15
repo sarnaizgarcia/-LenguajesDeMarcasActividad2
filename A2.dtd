@@ -33,17 +33,3 @@
 ]> 
 
 
-blo
-
-
-<xs:element name="" type="xs:string"/>
-
-
-
-XML
-
-<biblioteca>
-<libro>
-<identificadorLibro>L001</identificadorLibro>
-</libro>
-</biblioteca>
