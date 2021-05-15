@@ -6,7 +6,7 @@ DTD
 <!ELEMENT biblioteca (libro | revistas | periodicos)>
 
 <!ELEMENT libro (identificadorLibro, tipoLibro, tituloLibro, capitulo, numeroPaginasL, numeroPaginasC, contenido)>
-<!ATTLIST libro identificadorLibro ID #REQUIRED>
+  <!ATTLIST libro identificadorLibro ID #REQUIRED>
 <!ELEMENT tipoLibro (novela | infantil | didactico)>
 <!ELEMENT tituloLibro (#PCDATA)>
 <!ELEMENT numeroPaginasL (#PCDATA)>
@@ -27,7 +27,7 @@ DTD
 <!ELEMENT paginasS (#PCDATA)>
 
 <!ELEMENT periodicos (identificadorPeriodico, tipoPeriodico, seccionPeriodico, tipoSeccion, articulos, autor)>
-<!ATTLIST periodico identificadorPeriodico ID #REQUIRED>
+  <!ATTLIST periodico identificadorPeriodico ID #REQUIRED>
 <!ELEMENT tipoPeriodico (nacional | internacional)>
 <!ELEMENT seccionPeriodico (economica | opinion | deportes | nacional | internacional)>
 <!ELEMENT articulos (#PCDATA)>
@@ -44,45 +44,45 @@ XSD
 <xs:complexType>
 <xs:sequence>
 
-<xs:element name="libro">
-<xs:complexType>
-<xs:sequence>
-<xs:attribute name="identificadorLibro" type="xs:string" use="required"/>
-<xs:element name="tipoLibro" type="xs:string"/>
-<xs:element name="tituloLibro" type="xs:string"/>
-<xs:element name="capitulo" type="xs:string"/>
-<xs:element name="numeroPaginasL" type="xs:string"/>
-<xs:element name="numeroPaginasC" type="xs:string"/>
-<xs:element name="contenido" type="xs:string"/>
-</xs:sequence>
-</xs:complexType>
-</xs:element>
+  <xs:element name="libro">
+    <xs:complexType>
+    <xs:sequence>
+      <xs:attribute name="identificadorLibro" type="xs:string" use="required"/>
+        <xs:element name="tipoLibro" type="xs:string"/>
+        <xs:element name="tituloLibro" type="xs:string"/>
+        <xs:element name="capitulo" type="xs:string"/>
+        <xs:element name="numeroPaginasL" type="xs:string"/>
+        <xs:element name="numeroPaginasC" type="xs:string"/>
+        <xs:element name="contenido" type="xs:string"/>
+    </xs:sequence>
+    </xs:complexType>
+    </xs:element>
 
-<xs:element name="revista">
-<xs:complexType>
-<xs:sequence>
-<xs:attribute name="identificadorRevista" type="xs:string" use="required"/>
-<xs:element name="tipoRevista" type="xs:string"/>
-<xs:element name="tituloRevista" type="xs:string"/>
-<xs:element name="numeroRevista" type="xs:string"/>
-<xs:element name="seccionRevista" type="xs:string"/>
-<xs:element name="contenidoRevista" type="xs:string"/>
-</xs:sequence>
-</xs:complexType>
-</xs:element>
+  <xs:element name="revista">
+    <xs:complexType>
+    <xs:sequence>
+       <xs:attribute name="identificadorRevista" type="xs:string" use="required"/>
+        <xs:element name="tipoRevista" type="xs:string"/>
+        <xs:element name="tituloRevista" type="xs:string"/>
+        <xs:element name="numeroRevista" type="xs:string"/>
+        <xs:element name="seccionRevista" type="xs:string"/>
+        <xs:element name="contenidoRevista" type="xs:string"/>
+  </xs:sequence>
+  </xs:complexType>
+  </xs:element>
 
-<xs:element name="periodico">
-<xs:complexType>
-<xs:sequence>
-<xs:attribute name="identificadorPeriodico" type="xs:string" use="required"/>
-<xs:element name="tipoPeriodico" type="xs:string"/>
-<xs:element name="seccionPeriodico" type="xs:string"/>
-<xs:element name="tipoSeccion" type="xs:string"/>
-<xs:element name="articulos" type="xs:string"/>
-<xs:element name="autor" type="xs:string"/>
-</xs:sequence>
-</xs:complexType>
-</xs:element>
+  <xs:element name="periodico">
+    <xs:complexType>
+    <xs:sequence>
+        <xs:attribute name="identificadorPeriodico" type="xs:string" use="required"/>
+      <xs:element name="tipoPeriodico" type="xs:string"/>
+      <xs:element name="seccionPeriodico" type="xs:string"/>
+      <xs:element name="tipoSeccion" type="xs:string"/>
+      <xs:element name="articulos" type="xs:string"/>
+      <xs:element name="autor" type="xs:string"/>
+    </xs:sequence>
+    </xs:complexType>
+    </xs:element>
 
 </xs:sequence>
 </xs:complexType>
