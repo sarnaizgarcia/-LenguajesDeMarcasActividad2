@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Biblioteca" />
+	<element name="Libro">
+        <complexType>
+            <sequence>
+		<element name="Tipo_L">
+                <element name="Titulo" type="string"/>
+                <element name="Indice" type="string" minOccurs="1" maxOccurs="unbounded" />
+                <element name="Sinopsis">
+		<element name="numero_paginas_libro" type="int"/>
+		<element name="Capitulo">
+                    <complexType>
+                        <sequence>
+                            <element name="contenido" type="string"></element>
+                            <element name="numero_paginas_cap" type="int"></element>
+                        </sequence>
+                    </complexType>  
+                </element>
+
+		<element name="Revistas">
+		<complexType>
+            	<sequence>
+		<element name="Tipo_R">
+                <element name="Indice" type="string" />
+                <element name="Titulo" type="string" minOccurs="1" maxOccurs="unbounded" />
+                <element name="num_revista" type="int"/>
+		<element name="numero_pag_revista" type="int"/>
+		<element name="Capitulo">
+		<element name="Secciones">
+			<complexType>
+                        <sequence>
+                            <element name="contenido" type="string"></element>
+			    <element name="numero_paginas_seccion" type="int"></element>
+			</sequence>
+                    	</complexType>  
+                </element>
+<xs:element name="Biblioteca" />
