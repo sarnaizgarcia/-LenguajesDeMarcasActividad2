@@ -1,5 +1,3 @@
-DTD
-
 <?xml version="1.0" encoding="UTF-8"?> 
 <!DOCTYPE biblioteca [
 
@@ -35,60 +33,7 @@ DTD
 ]> 
 
 
-XSD
-
-<?xml version="1.0" encoding="UTF-8"?> 
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
-<xs:element name="biblioteca">
-<xs:complexType>
-<xs:sequence>
-
-  <xs:element name="libro">
-    <xs:complexType>
-    <xs:sequence>
-      <xs:attribute name="identificadorLibro" type="xs:string" use="required"/>
-        <xs:element name="tipoLibro" type="xs:string"/>
-        <xs:element name="tituloLibro" type="xs:string"/>
-        <xs:element name="capitulo" type="xs:string"/>
-        <xs:element name="numeroPaginasL" type="xs:string"/>
-        <xs:element name="numeroPaginasC" type="xs:string"/>
-        <xs:element name="contenido" type="xs:string"/>
-    </xs:sequence>
-    </xs:complexType>
-    </xs:element>
-
-  <xs:element name="revista">
-    <xs:complexType>
-    <xs:sequence>
-       <xs:attribute name="identificadorRevista" type="xs:string" use="required"/>
-        <xs:element name="tipoRevista" type="xs:string"/>
-        <xs:element name="tituloRevista" type="xs:string"/>
-        <xs:element name="numeroRevista" type="xs:string"/>
-        <xs:element name="seccionRevista" type="xs:string"/>
-        <xs:element name="contenidoRevista" type="xs:string"/>
-  </xs:sequence>
-  </xs:complexType>
-  </xs:element>
-
-  <xs:element name="periodico">
-    <xs:complexType>
-    <xs:sequence>
-        <xs:attribute name="identificadorPeriodico" type="xs:string" use="required"/>
-      <xs:element name="tipoPeriodico" type="xs:string"/>
-      <xs:element name="seccionPeriodico" type="xs:string"/>
-      <xs:element name="tipoSeccion" type="xs:string"/>
-      <xs:element name="articulos" type="xs:string"/>
-      <xs:element name="autor" type="xs:string"/>
-    </xs:sequence>
-    </xs:complexType>
-    </xs:element>
-
-</xs:sequence>
-</xs:complexType>
-</xs:element>
-</xs:schema> 
-
+blo
 
 
 <xs:element name="" type="xs:string"/>
