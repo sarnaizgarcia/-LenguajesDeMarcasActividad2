@@ -1,0 +1,40 @@
+<!-- XML **********************************/-->
+
+
+<biblioteca>
+	<libro>
+		<Tipo_L>Novela</Tipo_L>
+		<Titulo>Muerte en LM </Titulo>
+		<Indice>Indice RL </Indice>
+		<Sinopsis>Sinopsis</Sinopsis>
+		<Capitulo>
+			<contenido></contenido>
+			<numero_paginas_cap></numero_paginas_cap>
+		</capitulo>
+		<numero_paginas_libro></numero_paginas_libro>
+	</libro>
+	<Revistas>
+		<Tipo_R></Tipo_R>
+		<Titulo></Titulo>
+		<num_Revista></num_Revista>
+		<Indice></Indice>
+		<Secciones>
+			<contenido></contenido>
+			<numero_paginas_seccion></numero_paginas_seccion>
+		</Secciones>
+		<Capitulo></Capitulo>
+		<numero_pag_Revista></numero_pag_Revista>
+	</Revistas>
+
+	<Periodicos>
+		<tipo_P></Tipo_P>
+		<Titulo></Titulo>
+	</Periodicos>
+		
+			
+
+
+
+
+
+
