@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Elemento raiz: Biblioteca -->
+ <!ELEMENT Biblioteca (Biblioteca*)>
+
+ <!-- Elemento Biblioteca -->
+ <!ELEMENT Biblioteca (Libros,Periodicos,Revistas)>
+
+ <!-- Elemento Libros -->
+ <!ELEMENT Libros (Tipo,Titulo,Indice,Sinopsis,Capitulo,numero_paginas_libro)>
+ <!ATTLIST Libros
+    ident tipo_clase #REQUIRED>
+ <!ELEMENT Tipo_L (#PCDATA)>
+ <!ELEMENT Titulo (#PCDATA)>
+ <!ELEMENT Indice (#PCDATA)>
+ <!ELEMENT Sinopsis(#PCDATA)>
+ <!ELEMENT Capitulo (#PCDATA)>
+ <!ELEMENT numero_paginas_libro (#PCDATA)>
+ <!-- Elemento Tipo_L -->
+<!ELEMENT Tipo_L (Novela,Infantil,Didactico)>
+<!ELEMENT Novela (#PCDATA)>
+<!ELEMENT Infantil (#PCDATA)>
+<!ELEMENT Didactico (#PCDATA)>
+ <!-- Elemento Capitulo -->
+ <!ELEMENT Capitulo (contenido,numero_paginas_cap)>
+ <!ELEMENT contenido (#PCDATA)>
+ <!ELEMENT numero_paginas_cap (#PCDATA)>
+<!-- Elemento Revistas -->
+ <!ELEMENT Revistas (Tipo,Titulo,num_revista,Indice,Secciones,num_pag_revista)>
+<!ATTLIST Revistas
+    ident tipo_clase #REQUIRED>
+ <!ELEMENT Tipo_R (#PCDATA)>
+ <!ELEMENT Titulo (#PCDATA)>
+ <!ELEMENT num_revista (#PCDATA)>
+ <!ELEMENT Indice (#PCDATA)>
+ <!ELEMENT Secciones(#PCDATA)>
+ <!ELEMENT Capitulo (#PCDATA)>
+ <!ELEMENT numero_pag_revista (#PCDATA)>
+ <!-- Elemento Tipo_R -->
+<!ELEMENT Tipo_R (Informatica,Corazon,Coches,investigacion,Otras)>
+<!ELEMENT Informatica (#PCDATA)>
+<!ELEMENT Corazon (#PCDATA)>
+<!ELEMENT Coches (#PCDATA)>
+<!ELEMENT investigacion (#PCDATA)>
+<!ELEMENT Otras (#PCDATA)>
+<!-- Elemento Secciones -->
+<!ELEMENT Secciones (contenido,numero_paginas_seccion)>
+<!ELEMENT contenido (#PCDATA)>
+ <!ELEMENT numero_paginas_seccion (#PCDATA)>
+<!-- Elemento Periodicos -->
+ <!ELEMENT Periodicos (Tipo,Titulo)>
+ <!ATTLIST Periodicos
+    ident tipo_clase #REQUIRED>
+<!ELEMENT Tipo_P (#PCDATA)>
+<!ELEMENT Titulo (#PCDATA)>
+<!-- Elemento Tipo_P -->
+<!ELEMENT Tipo_P(Nacionales,internacionales)>
+<!ELEMENT Nacionales (#PCDATA)>
+<!ELEMENT Internacionales (#PCDATA)>
